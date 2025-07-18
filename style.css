@@ -1,0 +1,112 @@
+/* Fondo con corazones y rosa suave */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffe6f0;
+    background-image: url('fondo-acuarela-rosa-pintado-mano-detallado_1048-17039.avif'); /* fondo de corazones suaves */
+    background-size: 80px;
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.4);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+/* Título */
+h1 {
+    color: #d63384;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#btn-si {
+    background-color: #ff66b2;
+    color: white;
+}
+
+#btn-si:hover {
+    background-color: #e055a0;
+}
+
+#btn-no {
+    background-color: #ff4d4d;
+    color: white;
+    position: relative;
+}
+
+/* Mensaje de respuesta */
+.respuesta {
+    font-size: 1.4em;
+    color: #b30059;
+    margin-top: 25px;
+    animation: aparecer 0.8s ease-in-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Imagen opcional */
+.imagen {
+    margin-top: 25px;
+}
+
+.imagen img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+}
+
+/* Corazones flotando */
+.corazon {
+    position: fixed;
+    color: #ff69b4;
+    font-size: 24px;
+    animation: flotar 4s linear infinite;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) scale(1.5);
+        opacity: 0;
+    }
+}
